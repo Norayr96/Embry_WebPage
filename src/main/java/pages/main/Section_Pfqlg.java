@@ -1,3 +1,7 @@
+/*
+Section - Forget about standing on your scale
+ */
+
 package pages.main;
 
 import constants.DesiredResults;

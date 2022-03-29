@@ -1,3 +1,7 @@
+/*
+Section - Take control of your wellness
+ */
+
 package pages.main;
 
 import org.openqa.selenium.WebElement;
