@@ -1,12 +1,10 @@
 package pages.main;
 
 import constants.DesiredResults;
-import constants.Slides;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
 import utils.SeleniumActions;
-
 import java.util.ArrayList;
 import java.util.List;
 

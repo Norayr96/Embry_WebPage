@@ -17,16 +17,13 @@ public class Section_FQ32A_Tests extends BaseTest {
     public void tc_1() throws InterruptedException {
         Section_FQ32A sectionFq32A = new Section_FQ32A();
         sectionFq32A.isHappyWomanImgDisplayed();
-
     }
-
 
     @Test
     public void tc_2() throws InterruptedException {
         Section_FQ32A sectionFq32A = new Section_FQ32A();
         sectionFq32A.clickOnBuyNowBtn();
         Assert.assertTrue(sectionFq32A.isSectionDisplayed());
-
     }
 
     @Test
@@ -35,7 +32,6 @@ public class Section_FQ32A_Tests extends BaseTest {
         sectionFq32A.clickOnLearnMoreBtn();
         Assert.assertTrue(sectionFq32A.isSectionDisplayed());
     }
-
 }
 
 
