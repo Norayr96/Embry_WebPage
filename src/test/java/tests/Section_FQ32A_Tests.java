@@ -1,3 +1,6 @@
+/*
+Section - Take control of your wellness
+ */
 package tests;
 
 import org.testng.Assert;

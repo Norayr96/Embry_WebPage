@@ -1,3 +1,6 @@
+/*
+Section - Slider
+ */
 package pages.main;
 
 import constants.Slides;
