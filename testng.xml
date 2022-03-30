@@ -2,11 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="ParallelSuite" parallel="methods" thread-count="4">
     <test thread-count="4" name="ParallelTest">
-        <parameter name="browser" value="safari"></parameter>
+        <parameter name="browser" value="chrome"></parameter>
         <classes>
             <class name="tests.Section_FQ32A_Tests" />
             <class name="tests.Section_y54AO_Tests" />
             <class name="tests.Section_Pfqlg_Tests"/>
+            <class name="tests.Section_FaE3r_Tests"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
