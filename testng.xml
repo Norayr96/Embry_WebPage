@@ -8,6 +8,8 @@
             <class name="tests.Section_y54AO_Tests" />
             <class name="tests.Section_Pfqlg_Tests"/>
             <class name="tests.Section_FaE3r_Tests"/>
+            <class name="tests.Section_0AhWN_Tests"/>
+            <class name="tests.Section_7OotO_Tests"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
