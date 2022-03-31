@@ -6,7 +6,6 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pages.main.Section_0AhWN;
 import pages.main.Section_7OotO;
 
 public class Section_7OotO_Tests extends BaseTest {

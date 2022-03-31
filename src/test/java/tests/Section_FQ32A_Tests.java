@@ -19,18 +19,24 @@ public class Section_FQ32A_Tests extends BaseTest {
     @Test
     public void tc_1() throws InterruptedException {
         Section_FQ32A sectionFq32A = new Section_FQ32A();
-        sectionFq32A.isHappyWomanImgDisplayed();
+        Assert.assertTrue(sectionFq32A.isSectionContainsTexts());
     }
 
     @Test
     public void tc_2() throws InterruptedException {
+        Section_FQ32A sectionFq32A = new Section_FQ32A();
+        sectionFq32A.isHappyWomanImgDisplayed();
+    }
+
+    @Test
+    public void tc_3() throws InterruptedException {
         Section_FQ32A sectionFq32A = new Section_FQ32A();
         sectionFq32A.clickOnBuyNowBtn();
         Assert.assertTrue(sectionFq32A.isSectionDisplayed());
     }
 
     @Test
-    public void tc_3() throws InterruptedException {
+    public void tc_4() throws InterruptedException {
         Section_FQ32A sectionFq32A = new Section_FQ32A();
         sectionFq32A.clickOnLearnMoreBtn();
         Assert.assertTrue(sectionFq32A.isSectionDisplayed());

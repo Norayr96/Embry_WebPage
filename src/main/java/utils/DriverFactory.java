@@ -7,12 +7,10 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
 
 public class DriverFactory {
     protected static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-    @Parameters({"browser"})
     @BeforeMethod
     public static void initDriver(String browserType) {
         if (browserType.equals("chrome")) {
@@ -20,9 +18,10 @@ public class DriverFactory {
             chromeOptions.addArguments("--headless");
             WebDriverManager.chromedriver().setup();
             driver.set(new ChromeDriver(chromeOptions));
-            driver.get().manage().window().maximize();
+//            driver.get().manage().window().maximize();
             SeleniumActions.setActions();
         } else if (browserType.equals("safari")) {
+// MARK: Safari driver not working
             SafariOptions safariOptions = new SafariOptions();
             driver.set(new SafariDriver(safariOptions));
             driver.get().manage().window().maximize();
