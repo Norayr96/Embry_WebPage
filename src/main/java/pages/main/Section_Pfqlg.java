@@ -5,6 +5,7 @@ Section - Forget about standing on your scale
 package pages.main;
 
 import constants.DesiredResults;
+import constants.Texts;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
@@ -13,6 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Section_Pfqlg extends BasePage {
+
+    @FindBy(id = "column_Z44mL")
+    private WebElement column_Z44mL;
 
     @FindBy(id = "section_Pfqlg")
     private WebElement section_Pfqlg;
@@ -25,6 +29,17 @@ public class Section_Pfqlg extends BasePage {
 
     @FindBy(id = "section_5ZtkF")
     private WebElement section_5ZtkF;
+
+    public boolean isSectionContainsTexts (){
+        boolean result = false;
+        if(!column_Z44mL.getText().contains(Texts.COLUMN_Z44ML.getValue())){
+            System.out.println(column_Z44mL + " - is not contains texts, or text has been changed");
+            result = false;
+        } else {
+            result = true;
+        }
+        return result;
+    }
 
     public void clickOnBuyNowBtn() {
         SeleniumActions.clickOnElement(buyNowBtn);
