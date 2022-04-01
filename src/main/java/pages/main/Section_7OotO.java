@@ -14,7 +14,7 @@ public class Section_7OotO extends BasePage {
 
    public boolean isSectionContainsTexts (){
        boolean result = false;
-       if(!column_mf1gb.getText().contains(Texts.COLUMN_MF1GB.getValue())){
+       if(!column_mf1gb.getText().equals(Texts.COLUMN_MF1GB.getValue())){
            System.out.println(column_mf1gb + " - is not contains texts, or text has been changed");
            result = false;
        } else {

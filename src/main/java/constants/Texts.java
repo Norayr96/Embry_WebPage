@@ -1,7 +1,9 @@
 /*
 COLUMN_GWQE3 - section_FQ32A
 COLUMN_Z44ML - section_Pfqlg
+COLUMN_DZRX6 - column_dzRX6
 COLUMN_MF1GB - section_7OotO
+
  */
 package constants;
 
@@ -11,6 +13,11 @@ public enum Texts {
             "helps you feel at your best with Embry Premium Smart Insole."),
     COLUMN_Z44ML("Forget about standing on your scale\n" +
             "Set your comfortable weight range and Embry will guide you towards your desired results."),
+    COLUMN_DZRX6("Walk towards\n" +
+            "your better self!\n" +
+            "Build better habits\n" +
+            "Boost your confidence\n" +
+            "Hold yourself accountable to your selected health goals"),
     COLUMN_MF1GB("Just slide Embry into your shoe & let Embry empower you!\n" +
             "Embry empowers and sets you free by monitoring your lifestyle behind the scenes. You’ll receive recommendations to build better habits through Embry’s friendly accountability. Link your smart insole to your phone, and receive healthy reminders that encourage you to stay on your ultimate level of physical activity and stay in your comfortable weight range.\n" +
             "Your privacy matters as much as your health: \n" +

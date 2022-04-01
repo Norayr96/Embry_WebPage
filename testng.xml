@@ -4,11 +4,12 @@
     <test thread-count="4" name="ParallelTest">
         <parameter name="browser" value="chrome" />
         <classes>
-            <class name="tests.Section_FQ32A_Tests" />
-            <class name="tests.Section_y54AO_Tests" />
+            <class name="tests.Section_FQ32A_Tests"/>
+            <class name="tests.Section_y54AO_Tests"/>
             <class name="tests.Section_Pfqlg_Tests"/>
             <class name="tests.Section_FaE3r_Tests"/>
             <class name="tests.Section_0AhWN_Tests"/>
+            <class name="tests.Section_EKXE4_Tests"/>
             <class name="tests.Section_7OotO_Tests"/>
         </classes>
     </test> <!-- Test -->
