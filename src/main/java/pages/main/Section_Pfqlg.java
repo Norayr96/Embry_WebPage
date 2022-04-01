@@ -32,7 +32,7 @@ public class Section_Pfqlg extends BasePage {
 
     public boolean isSectionContainsTexts (){
         boolean result = false;
-        if(!column_Z44mL.getText().contains(Texts.COLUMN_Z44ML.getValue())){
+        if(!column_Z44mL.getText().equals(Texts.COLUMN_Z44ML.getValue())){
             System.out.println(column_Z44mL + " - is not contains texts, or text has been changed");
             result = false;
         } else {
