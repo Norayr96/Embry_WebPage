@@ -11,6 +11,7 @@
             <class name="tests.Section_0AhWN_Tests"/>
             <class name="tests.Section_EKXE4_Tests"/>
             <class name="tests.Section_7OotO_Tests"/>
+            <class name="tests.Section_5ZtkF_Tests"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
