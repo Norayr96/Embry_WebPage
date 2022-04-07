@@ -1,6 +1,5 @@
-/*
-Section - Story images
- */
+//Section - Story images
+
 package tests;
 
 import org.testng.Assert;

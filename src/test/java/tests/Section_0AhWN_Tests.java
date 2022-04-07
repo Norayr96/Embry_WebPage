@@ -1,6 +1,5 @@
-/*
-Section - Obtain visible results with invisible tracking
- */
+//Section - Obtain visible results with invisible tracking
+
 package tests;
 
 import org.testng.Assert;

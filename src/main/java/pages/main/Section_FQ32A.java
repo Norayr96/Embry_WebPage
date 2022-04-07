@@ -1,6 +1,5 @@
-/*
-Section - Take control of your wellness
- */
+//Section - Take control of your wellness
+
 
 package pages.main;
 

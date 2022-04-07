@@ -1,10 +1,9 @@
-/*
-COLUMN_GWQE3 - section_FQ32A
-COLUMN_Z44ML - section_Pfqlg
-COLUMN_DZRX6 - column_dzRX6
-COLUMN_MF1GB - section_7OotO
+//COLUMN_GWQE3 - section_FQ32A
+//COLUMN_Z44ML - section_Pfqlg
+//COLUMN_DZRX6 - section_EKXE4
+//COLUMN_MF1GB - section_7OotO
+//COLUMN_A6GZI - section 5ZtkF
 
- */
 package constants;
 
 public enum Texts {
@@ -21,7 +20,18 @@ public enum Texts {
     COLUMN_MF1GB("Just slide Embry into your shoe & let Embry empower you!\n" +
             "Embry empowers and sets you free by monitoring your lifestyle behind the scenes. You’ll receive recommendations to build better habits through Embry’s friendly accountability. Link your smart insole to your phone, and receive healthy reminders that encourage you to stay on your ultimate level of physical activity and stay in your comfortable weight range.\n" +
             "Your privacy matters as much as your health: \n" +
-            "We’ll treat your personal data with utmost protection and care.");
+            "We’ll treat your personal data with utmost protection and care."),
+    PRICE("$149.99"),
+    COLUMN_A6GZI("Embry Premium Smart Insole measures your bodyweight fluctuations without a scale using patent-pending technology.\n" +
+            "Recommended for casual and athletic footwear, mainly sneakers with a removable insole. Trimming lines are imprinted on the insole to perfectly fit your sneaker.\n" +
+            "What’s included in the box:\n" +
+            "Pair of Embry Smart Insoles,\n" +
+            "Wireless Charger,\n" +
+            "USB-c Cable\n" +
+            "Specs:\n" +
+            "2 days battery life,\n" +
+            "2 hrs charging time\n" +
+            "Wireless charging");
 
     private String value;
 

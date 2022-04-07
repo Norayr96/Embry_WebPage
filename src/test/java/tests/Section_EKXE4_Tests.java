@@ -1,6 +1,5 @@
-/*
-Section - Walk towards your better self!
- */
+//Section - Walk towards your better self!
+
 package tests;
 
 import org.testng.Assert;
