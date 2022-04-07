@@ -1,6 +1,5 @@
-/*
-Cart page
- */
+//Cart page
+
 package pages.cart;
 
 import pages.BasePage;

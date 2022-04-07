@@ -1,6 +1,4 @@
-/*
-Section - Forget about standing on your scale
- */
+//Section - Forget about standing on your scale
 
 package pages.main;
 

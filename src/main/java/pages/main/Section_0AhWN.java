@@ -1,6 +1,5 @@
-/*
-Section - Obtain visible results with invisible tracking
- */
+//Section - Obtain visible results with invisible tracking
+
 package pages.main;
 
 import org.openqa.selenium.WebElement;

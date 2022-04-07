@@ -1,6 +1,5 @@
-/*
-Section - Just slide Embry into your shoe & let Embry empower you!
- */
+//Section - Just slide Embry into your shoe & let Embry empower you!
+
 package pages.main;
 
 import constants.Texts;

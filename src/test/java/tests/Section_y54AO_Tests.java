@@ -1,6 +1,5 @@
-/*
-Section - Slider
- */
+//Section - Slider
+
 package tests;
 
 import org.testng.Assert;

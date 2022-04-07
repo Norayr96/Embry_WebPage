@@ -1,6 +1,5 @@
-/*
-Section - Forget about standing on your scale
- */
+//Section - Forget about standing on your scale
+
 package tests;
 
 import org.testng.Assert;

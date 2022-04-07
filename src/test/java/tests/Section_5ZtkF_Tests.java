@@ -1,14 +1,12 @@
-/*
-Section - Embry Premium Smart Insoles
-$149.99
- */
+//Section - Embry Premium Smart Insoles
+//$149.99
+
 package tests;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.main.Section_5ZtkF;
-import utils.Waiters;
 
 public class Section_5ZtkF_Tests extends BaseTest {
     final String PATH = "";
@@ -71,4 +69,29 @@ public class Section_5ZtkF_Tests extends BaseTest {
         softAssert.assertTrue(section5ZtkF.isCartPageNavigated(), "Cart page is not navigated");
         softAssert.assertAll();
     }
+
+    @Test
+    public void tc_7(){
+        Section_5ZtkF section5ZtkF = new Section_5ZtkF();
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(section5ZtkF.isPriceTrue());
+        softAssert.assertAll();
+    }
+
+    @Test
+    public void tc_8(){
+        Section_5ZtkF section5ZtkF = new Section_5ZtkF();
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(section5ZtkF.isSectionContainsTexts());
+        softAssert.assertAll();
+    }
+
+    @Test
+    public void tc_9(){
+        Section_5ZtkF section5ZtkF = new Section_5ZtkF();
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(section5ZtkF.isAllPaymentMethodsShown());
+        softAssert.assertAll();
+    }
+
 }

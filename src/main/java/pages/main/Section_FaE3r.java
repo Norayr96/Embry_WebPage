@@ -1,6 +1,5 @@
-/*
-Section - Story images
- */
+//Section - Story images
+
 package pages.main;
 
 import org.openqa.selenium.WebElement;
