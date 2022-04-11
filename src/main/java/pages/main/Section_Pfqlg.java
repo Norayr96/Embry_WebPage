@@ -10,8 +10,11 @@ import pages.BasePage;
 import utils.SeleniumActions;
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Section_Pfqlg extends BasePage {
+    private static final Logger logger = LogManager.getLogger(Section_Pfqlg.class);
 
     @FindBy(id = "column_Z44mL")
     private WebElement column_Z44mL;
@@ -31,7 +34,7 @@ public class Section_Pfqlg extends BasePage {
     public boolean isSectionContainsTexts (){
         boolean result = false;
         if(!column_Z44mL.getText().equals(Texts.COLUMN_Z44ML.getValue())){
-            System.out.println(column_Z44mL + " - is not contains texts, or text has been changed");
+            logger.error(column_Z44mL + " - is not contain texts, or text has been changed");
             result = false;
         } else {
             result = true;
@@ -46,9 +49,9 @@ public class Section_Pfqlg extends BasePage {
     public boolean isSectionDisplayed() {
         boolean result = false;
         if (section_5ZtkF.isDisplayed()) {
-            System.out.println("section_5ZtkF is Displayed");
+            logger.info("section_5ZtkF is Displayed");
             result = true;
-        } else System.out.println("section_5ZtkF is not Displayed");
+        } else logger.error("section_5ZtkF is not Displayed");
         return result;
     }
 
@@ -64,7 +67,7 @@ public class Section_Pfqlg extends BasePage {
 
         for (int i = 0; i < enumDesiredResults.size(); i++) {
             if (!enumDesiredResults.get(i).equals(desiredResults.get(i).getText().toString())) {
-                System.out.println(enumDesiredResults.get(i) + " - is not displayed");
+                logger.error(enumDesiredResults.get(i) + " - is not displayed");
                 result = false;
                 break;
             } else {

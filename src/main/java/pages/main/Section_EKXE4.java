@@ -3,6 +3,8 @@
 package pages.main;
 
 import constants.Texts;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,6 +13,7 @@ import utils.DriverFactory;
 import utils.Waiters;
 
 public class Section_EKXE4 extends BasePage {
+    private static final Logger logger = LogManager.getLogger(Section_EKXE4.class);
 
     @FindBy(id = "column_dzRX6")
     private WebElement column_dzRX6;
@@ -18,9 +21,10 @@ public class Section_EKXE4 extends BasePage {
     public boolean isSectionContainsTexts() {
         boolean result = false;
         if (!column_dzRX6.getText().equals(Texts.COLUMN_DZRX6.getValue())) {
-            System.out.println(column_dzRX6 + " - is not contains texts, or text has been changed");
+            logger.error(column_dzRX6 + " - is not contains texts, or text has been changed");
             result = false;
         } else {
+            logger.info(column_dzRX6 + " - is contains texts");
             result = true;
         }
         return result;

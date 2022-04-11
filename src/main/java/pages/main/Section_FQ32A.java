@@ -8,8 +8,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
 import utils.SeleniumActions;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Section_FQ32A extends BasePage {
+    private static final Logger logger = LogManager.getLogger(Section_FQ32A.class);
 
     @FindBy(id = "column_gwqE3")
     private WebElement column_gwqE3;
@@ -37,9 +40,10 @@ public class Section_FQ32A extends BasePage {
     public boolean isSectionContainsTexts (){
         boolean result = false;
         if(!column_gwqE3.getText().contains(Texts.COLUMN_GWQE3.getValue())){
-            System.out.println(column_gwqE3 + " - is not contains texts, or text has been changed");
+            logger.error(column_gwqE3 + " - is not contain texts, or text has been changed");
             result = false;
         } else {
+            logger.info(column_gwqE3 + " - is contain texts");
             result = true;
         }
         return result;
@@ -48,18 +52,17 @@ public class Section_FQ32A extends BasePage {
     public boolean isSectionDisplayed() {
         boolean result = false;
                 if (section_5ZtkF.isDisplayed()) {
-                    System.out.println("section_5ZtkF is Displayed");
                     result = true;
-                } else System.out.println("section_5ZtkF is not Displayed");
+                } else logger.error("section_5ZtkF is not Displayed");
         return result;
     }
 
     public boolean isHappyWomanImgDisplayed() {
         boolean result = false;
         if (happyWomanImg.isDisplayed()) {
-            System.out.println("happyWoman is Displayed");
+            logger.info("Happy Woman img is Displayed");
             result = true;
-        } else System.out.println("happyWoman is not Displayed");
+        } else logger.error("Happy Woman img is not Displayed");
         return result;
     }
 }

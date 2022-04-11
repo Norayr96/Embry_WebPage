@@ -8,7 +8,6 @@ import utils.DriverFactory;
 public class BaseTest {
     static final String BASE_URL = "https://embry.tech/";
 
-
     @Parameters ({"browser"})
     @BeforeMethod
     public void setUp(String browserType) {
