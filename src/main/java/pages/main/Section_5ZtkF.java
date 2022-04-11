@@ -3,6 +3,8 @@
 
 package pages.main;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import constants.PaymentMethods;
 import constants.Texts;
 import org.openqa.selenium.WebElement;
@@ -15,6 +17,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Section_5ZtkF extends BasePage {
+    private static final Logger logger = LogManager.getLogger(Section_5ZtkF.class);
+
     @FindBy(xpath = "//*[@id='product-2507']//ul/li[1]")
     private WebElement forWomanBtn;
 
@@ -48,7 +52,7 @@ public class Section_5ZtkF extends BasePage {
     public boolean isPriceTrue() {
         boolean result = false;
         if (!price.getText().equals(Texts.PRICE.getValue())) {
-            System.out.println(price + " - is not contains texts, or Price has been changed");
+            logger.error(price + " - is not contains texts, or Price has been changed");
             result = false;
         } else {
             result = true;
@@ -59,7 +63,7 @@ public class Section_5ZtkF extends BasePage {
     public boolean isSectionContainsTexts() {
         boolean result = false;
         if (!insolesDescription.getText().equals(Texts.COLUMN_A6GZI.getValue())) {
-            System.out.println(insolesDescription + " - is not contains texts, or text has been changed");
+            logger.error(insolesDescription + " - is not contain texts, or text has been changed");
             result = false;
         } else {
             result = true;
@@ -130,7 +134,7 @@ public class Section_5ZtkF extends BasePage {
 
         for (int i = 0; i < enumPaymentMethods.size(); i++) {
             if (!enumPaymentMethods.get(i).equals(paymentMethods.get(i).getAttribute("src"))) {
-                System.out.println(enumPaymentMethods.get(i) + " - is not displayed");
+                logger.error(enumPaymentMethods.get(i) + " - is not displayed");
                 result = false;
                 break;
             } else {

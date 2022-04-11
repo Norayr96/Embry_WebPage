@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.safari.SafariDriver;
-import org.openqa.selenium.safari.SafariOptions;
 import org.testng.annotations.BeforeMethod;
 
 public class DriverFactory {
@@ -21,9 +20,8 @@ public class DriverFactory {
 //            driver.get().manage().window().maximize();
             SeleniumActions.setActions();
         } else if (browserType.equals("safari")) {
-// MARK: Safari driver not working
-            SafariOptions safariOptions = new SafariOptions();
-            driver.set(new SafariDriver(safariOptions));
+// MARK: Safari driver not working correctly
+            driver.set(new SafariDriver());
             driver.get().manage().window().maximize();
             SeleniumActions.setActions();
         }
@@ -35,7 +33,7 @@ public class DriverFactory {
 
     public static void quitDriver() {
         SeleniumActions.removeActions();
-        driver.get().close();
+        driver.get().quit();
         driver.remove();
     }
 }
