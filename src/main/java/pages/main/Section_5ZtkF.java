@@ -49,38 +49,29 @@ public class Section_5ZtkF extends BasePage {
     @FindBy(xpath = "//*[@id='quantity_624acf082b2f0']")
     private WebElement quantity;
 
+    @FindBy(xpath = "//div[2]/button")
+    private WebElement closeBtn;
+
     public boolean isPriceTrue() {
-        boolean result = false;
         if (!price.getText().equals(Texts.PRICE.getValue())) {
             logger.error(price + " - is not contains texts, or Price has been changed");
-            result = false;
-        } else {
-            result = true;
         }
-        return result;
+        return price.getText().equals(Texts.PRICE.getValue());
     }
 
     public boolean isSectionContainsTexts() {
-        boolean result = false;
         if (!insolesDescription.getText().equals(Texts.COLUMN_A6GZI.getValue())) {
             logger.error(insolesDescription + " - is not contain texts, or text has been changed");
-            result = false;
-        } else {
-            result = true;
         }
-        return result;
-    }
-
-    public void clickOnWomanBtn() {
-        Waiters.waitForVisibility(forWomanBtn);
-        Waiters.waitForClickable(forWomanBtn);
-        SeleniumActions.clickOnElement(forWomanBtn);
+        return insolesDescription.getText().equals(Texts.COLUMN_A6GZI.getValue());
     }
 
     public boolean isSelectedWomanBtn() {
-        boolean result = false;
-        result = forWomanBtn.getAttribute("aria-checked").equals("true");
-        return result;
+        return forWomanBtn.getAttribute("aria-checked").equals("true");
+    }
+
+    public boolean isSelectedManBtn() {
+        return forManBtn.getAttribute("aria-checked").equals("true");
     }
 
     public void clickOnManBtn() {
@@ -89,17 +80,11 @@ public class Section_5ZtkF extends BasePage {
         SeleniumActions.clickOnElement(forManBtn);
     }
 
-    public boolean isSelectedManBtn() {
-        boolean result = false;
-        result = forManBtn.getAttribute("aria-checked").equals("true");
-        return result;
-    }
-
     public boolean isSelectedSize() {
         boolean result = false;
-        for (int i = 0; i < sizes.size(); i++) {
-            SeleniumActions.clickOnElement(sizes.get(i));
-            result = sizes.get(i).getAttribute("aria-checked").equals("true");
+        for (WebElement size : sizes) {
+            SeleniumActions.clickOnElement(size);
+            result = size.getAttribute("aria-checked").equals("true");
         }
         return result;
     }
@@ -108,17 +93,15 @@ public class Section_5ZtkF extends BasePage {
         Waiters.waitForVisibility(sizeChartBtn);
         SeleniumActions.clickOnElement(sizeChartBtn);
         Waiters.waitForVisibility(sizeChart);
-        boolean result = false;
-        result = sizeChart.isDisplayed();
+        boolean result = sizeChart.isDisplayed();
+        SeleniumActions.clickOnElement(closeBtn);
         return result;
-
     }
 
     public boolean isCartPageNavigated() {
         Waiters.waitForVisibility(addToCartBtn);
         SeleniumActions.clickOnElement(addToCartBtn);
-        boolean result = DriverFactory.getDriver().getCurrentUrl().equals("https://embry.tech/cart/");
-        return result;
+        return DriverFactory.getDriver().getCurrentUrl().equals("https://embry.tech/cart/");
     }
 
     public boolean isAllPaymentMethodsShown() {

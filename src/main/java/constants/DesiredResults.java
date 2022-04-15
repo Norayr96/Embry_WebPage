@@ -7,7 +7,7 @@ public enum DesiredResults {
     ACTIVE_HOURS("Active Hours"),
     STEPS("Steps");
 
-    private String value;
+    final private String value;
 
     DesiredResults(String str) {
         this.value = str;

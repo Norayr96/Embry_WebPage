@@ -9,15 +9,14 @@ import org.testng.asserts.SoftAssert;
 import pages.main.Section_5ZtkF;
 
 public class Section_5ZtkF_Tests extends BaseTest {
-    final String PATH = "";
 
     @BeforeMethod
     void openPage() {
-        navigateToURI(PATH);
+        navigateToURI("");
     }
 
     @Test
-    public void tc_1(){
+    public void tc_1() {
         Section_5ZtkF section5ZtkF = new Section_5ZtkF();
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(section5ZtkF.isSelectedWomanBtn(), "Woman Btn is not selected");
@@ -26,7 +25,7 @@ public class Section_5ZtkF_Tests extends BaseTest {
     }
 
     @Test
-    public void tc_2(){
+    public void tc_2() {
         Section_5ZtkF section5ZtkF = new Section_5ZtkF();
         SoftAssert softAssert = new SoftAssert();
         section5ZtkF.clickOnManBtn();
@@ -36,61 +35,40 @@ public class Section_5ZtkF_Tests extends BaseTest {
     }
 
     @Test
-    public void tc_3(){
+    public void tc_3() {
         Section_5ZtkF section5ZtkF = new Section_5ZtkF();
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(section5ZtkF.isSelectedWomanBtn(), "Woman Btn is not selected");
-        softAssert.assertTrue(section5ZtkF.isSelectedSize(),"Size is not selected");
+        softAssert.assertTrue(section5ZtkF.isSelectedSize(), "Size is not selected");
         softAssert.assertAll();
     }
 
     @Test
-    public void tc_4(){
+    public void tc_4() {
         Section_5ZtkF section5ZtkF = new Section_5ZtkF();
         SoftAssert softAssert = new SoftAssert();
         section5ZtkF.clickOnManBtn();
         softAssert.assertTrue(section5ZtkF.isSelectedManBtn(), "Man Btn is not selected");
-        softAssert.assertTrue(section5ZtkF.isSelectedSize(),"Size is not selected");
+        softAssert.assertTrue(section5ZtkF.isSelectedSize(), "Size is not selected");
         softAssert.assertAll();
     }
 
     @Test
-    public void tc_5(){
+    public void tc_5() {
         Section_5ZtkF section5ZtkF = new Section_5ZtkF();
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(section5ZtkF.isSizeChartDisplayed(), "Size Chart popup is not displayed");
+        softAssert.assertTrue(section5ZtkF.isPriceTrue());
+        softAssert.assertTrue(section5ZtkF.isSectionContainsTexts());
+        softAssert.assertTrue(section5ZtkF.isAllPaymentMethodsShown());
         softAssert.assertAll();
     }
 
     @Test
-    public void tc_6(){
+    public void tc_6() {
         Section_5ZtkF section5ZtkF = new Section_5ZtkF();
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(section5ZtkF.isCartPageNavigated(), "Cart page is not navigated");
-        softAssert.assertAll();
-    }
-
-    @Test
-    public void tc_7(){
-        Section_5ZtkF section5ZtkF = new Section_5ZtkF();
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(section5ZtkF.isPriceTrue());
-        softAssert.assertAll();
-    }
-
-    @Test
-    public void tc_8(){
-        Section_5ZtkF section5ZtkF = new Section_5ZtkF();
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(section5ZtkF.isSectionContainsTexts());
-        softAssert.assertAll();
-    }
-
-    @Test
-    public void tc_9(){
-        Section_5ZtkF section5ZtkF = new Section_5ZtkF();
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(section5ZtkF.isAllPaymentMethodsShown());
         softAssert.assertAll();
     }
 

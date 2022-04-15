@@ -23,11 +23,9 @@ public class Section_0AhWN extends BasePage {
     }
 
     public boolean isSectionDisplayed() {
-        boolean result = false;
-        if (section_5ZtkF.isDisplayed()) {
-            logger.info("section_5ZtkF is Displayed");
-            result = true;
-        } else logger.error("section_5ZtkF is not Displayed");
-        return result;
+        if (!section_5ZtkF.isDisplayed()) {
+            logger.error("section_5ZtkF is not Displayed");
+        }
+        return section_5ZtkF.isDisplayed();
     }
 }

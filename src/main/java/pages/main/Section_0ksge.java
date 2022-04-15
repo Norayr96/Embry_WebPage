@@ -2,5 +2,7 @@
 
 package pages.main;
 
-public class Section_0ksge {
+import pages.BasePage;
+
+public class Section_0ksge extends BasePage {
 }

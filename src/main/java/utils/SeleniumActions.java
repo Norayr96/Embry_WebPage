@@ -23,10 +23,10 @@ public class SeleniumActions {
     }
 
     public static void clickOnElement(WebElement element) {
-        Waiters.waitForVisibility(element);
-        Waiters.waitForClickable(element);
-        getActions().click(element).build().perform();
-        logger.info("Clicked on " + element);
+        if (Waiters.waitForVisibility(element)){
+            Waiters.waitForClickable(element);
+            getActions().click(element).build().perform();
+        }else logger.error(element + "is not displayed");
     }
 
     public static void typeTextOnElement(WebElement element, String text) {
