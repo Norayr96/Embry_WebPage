@@ -8,15 +8,14 @@ import org.testng.annotations.Test;
 import pages.main.Section_7OotO;
 
 public class Section_7OotO_Tests extends BaseTest {
-    final String PATH = "";
 
     @BeforeMethod
     void openPage() {
-        navigateToURI(PATH);
+        navigateToURI("");
     }
 
     @Test
-    public void tc_1() throws InterruptedException {
+    public void tc_1() {
         Section_7OotO  section7OotO = new Section_7OotO();
         Assert.assertTrue(section7OotO.isSectionContainsTexts());
     }

@@ -14,9 +14,6 @@ import java.util.List;
 public class Section_y54AO extends BasePage {
     private static final Logger logger = LogManager.getLogger(Section_y54AO.class);
 
-    @FindBy(id = "section_y54AO")
-    private WebElement section_y54AO;
-
     @FindBy(xpath = "//*[@id='W2D2w']//img")
     private List<WebElement> flexSlider;
 

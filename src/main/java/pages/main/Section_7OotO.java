@@ -16,15 +16,10 @@ public class Section_7OotO extends BasePage {
     private WebElement column_mf1gb;
 
     public boolean isSectionContainsTexts() {
-        boolean result = false;
         if (!column_mf1gb.getText().equals(Texts.COLUMN_MF1GB.getValue())) {
             logger.error(column_mf1gb + " - is not contain texts, or text has been changed");
-            result = false;
-        } else {
-            logger.info(column_mf1gb + " - is contain texts");
-            result = true;
         }
-        return result;
+        return column_mf1gb.getText().equals(Texts.COLUMN_MF1GB.getValue());
     }
 
 }

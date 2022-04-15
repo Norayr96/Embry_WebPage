@@ -2,5 +2,12 @@
 
 package tests;
 
-public class Section_0ksge_Tests {
+import org.testng.annotations.BeforeMethod;
+
+public class Section_0ksge_Tests extends BaseTest {
+    @BeforeMethod
+    void openPage() {
+        navigateToURI("");
+    }
+
 }

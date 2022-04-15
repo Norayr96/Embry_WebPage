@@ -19,9 +19,6 @@ public class Section_Pfqlg extends BasePage {
     @FindBy(id = "column_Z44mL")
     private WebElement column_Z44mL;
 
-    @FindBy(id = "section_Pfqlg")
-    private WebElement section_Pfqlg;
-
     @FindBy(xpath = "//*[@id='xCTDz']/div")
     private List<WebElement> desiredResults;
 
@@ -32,14 +29,10 @@ public class Section_Pfqlg extends BasePage {
     private WebElement section_5ZtkF;
 
     public boolean isSectionContainsTexts (){
-        boolean result = false;
         if(!column_Z44mL.getText().equals(Texts.COLUMN_Z44ML.getValue())){
             logger.error(column_Z44mL + " - is not contain texts, or text has been changed");
-            result = false;
-        } else {
-            result = true;
         }
-        return result;
+        return column_Z44mL.getText().equals(Texts.COLUMN_Z44ML.getValue());
     }
 
     public void clickOnBuyNowBtn() {
@@ -47,12 +40,10 @@ public class Section_Pfqlg extends BasePage {
     }
 
     public boolean isSectionDisplayed() {
-        boolean result = false;
-        if (section_5ZtkF.isDisplayed()) {
-            logger.info("section_5ZtkF is Displayed");
-            result = true;
-        } else logger.error("section_5ZtkF is not Displayed");
-        return result;
+        if (!section_5ZtkF.isDisplayed()) {
+            logger.error("section_5ZtkF is not Displayed");
+        }
+        return section_5ZtkF.isDisplayed();
     }
 
     public boolean isAllDesiredResultsShown() {
@@ -66,7 +57,7 @@ public class Section_Pfqlg extends BasePage {
         boolean result = false;
 
         for (int i = 0; i < enumDesiredResults.size(); i++) {
-            if (!enumDesiredResults.get(i).equals(desiredResults.get(i).getText().toString())) {
+            if (!enumDesiredResults.get(i).equals(desiredResults.get(i).getText())) {
                 logger.error(enumDesiredResults.get(i) + " - is not displayed");
                 result = false;
                 break;
