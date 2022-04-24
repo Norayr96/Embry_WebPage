@@ -1,5 +1,6 @@
 package utils;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.apache.logging.log4j.LogManager;
@@ -27,6 +28,11 @@ public class SeleniumActions {
             Waiters.waitForClickable(element);
             getActions().click(element).build().perform();
         }else logger.error(element + "is not displayed");
+    }
+
+    public static void scrollDown(){
+        JavascriptExecutor js = (JavascriptExecutor) DriverFactory.getDriver();
+        js.executeScript("window.scrollBy(0,650)", "");
     }
 
     public static void typeTextOnElement(WebElement element, String text) {

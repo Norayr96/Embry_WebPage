@@ -31,9 +31,11 @@ public enum Texts {
             "Specs:\n" +
             "2 days battery life,\n" +
             "2 hrs charging time\n" +
-            "Wireless charging");
+            "Wireless charging"),
+    FOOTER_TEXT( "Embry Tech, Inc. | 326 Mira Loma Ave, Glendale, CA 91204, USA | Privacy Policy | info@embry.tech\n" +
+            "2022 © Copyright. All rights Reserved by Embry");
 
-    private String value;
+    private final String value;
 
     Texts(String str) {
         this.value = str;
