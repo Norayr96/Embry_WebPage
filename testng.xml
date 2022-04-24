@@ -13,6 +13,9 @@
             <class name="tests.Section_7OotO_Tests"/>
             <class name="tests.Section_5ZtkF_Tests"/>
             <class name="tests.CartPageTests"/>
+            <class name="tests.Header_Tests"/>
+            <class name="tests.Footer_Tests"/>
+            <class name="tests.FAQ_TESTS"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

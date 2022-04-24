@@ -101,6 +101,9 @@ public class Section_5ZtkF extends BasePage {
     public boolean isCartPageNavigated() {
         Waiters.waitForVisibility(addToCartBtn);
         SeleniumActions.clickOnElement(addToCartBtn);
+        if (!DriverFactory.getDriver().getCurrentUrl().equals("https://embry.tech/cart/")){
+            logger.error("Cart page is not navigated");
+        }
         return DriverFactory.getDriver().getCurrentUrl().equals("https://embry.tech/cart/");
     }
 

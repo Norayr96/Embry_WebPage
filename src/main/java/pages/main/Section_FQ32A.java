@@ -44,11 +44,10 @@ public class Section_FQ32A extends BasePage {
     }
 
     public boolean isSectionDisplayed() {
-        boolean result = false;
-        if (section_5ZtkF.isDisplayed()) {
-            result = true;
-        } else logger.error("section_5ZtkF is not Displayed");
-        return result;
+        if (!section_5ZtkF.isDisplayed()) {
+            logger.error("section_5ZtkF is not Displayed");
+        }
+        return section_5ZtkF.isDisplayed();
     }
 
     public boolean isHappyWomanImgDisplayed() {
